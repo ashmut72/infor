@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Información Tecnológica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== Barra de navegación ===== -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-uppercase" href="#inicio"><span>Información Tecnológica</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="menuPrincipal" aria-labelledby="menuPrincipalLabel">
+                <div class="offcanvas-header d-lg-none">
+                    <span class="offcanvas-title h5 fw-semibold mb-0" id="menuPrincipalLabel">Menú</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#menuPrincipal" aria-label="Cerrar menú"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hardware">Hardware</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#software">Software</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ia">Inteligencia Artificial</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#redes">Redes e Internet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ===== Carrusel de Bootstrap ===== -->
+        <div id="inicio" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000" role="region" aria-roledescription="carrusel" aria-label="Presentación de tecnologías">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active hero text-white text-center">
+                    <div class="container py-5">
+                        <h1 class="titulo display-4 fw-bold mb-3">Explora las Tecnologías Actuales</h1>
+                        <p class="lead mx-auto mb-4 col-lg-7">Hardware, software, inteligencia artificial y redes explicados de forma simple.</p>
+                        <a href="#temas" class="btn btn-light">Ver temas ↓</a>
+                        <button type="button" class="btn btn-outline-light ms-2" data-bs-toggle="modal" data-bs-target="#modalTecnologia">Más información</button>
+                    </div>
+                </div>
+                <div class="carousel-item hero text-white text-center">
+                    <div class="container py-5">
+                        <p class="titulo display-4 fw-bold mb-3">Conoce el Hardware</p>
+                        <p class="lead mx-auto mb-4 col-lg-7">Descubre las partes físicas que hacen funcionar una computadora.</p>
+                        <a href="#hardware" class="btn btn-light">Explorar hardware</a>
+                    </div>
+                </div>
+                <div class="carousel-item hero text-white text-center">
+                    <div class="container py-5">
+                        <p class="titulo display-4 fw-bold mb-3">El futuro es tecnológico</p>
+                        <p class="lead mx-auto mb-4 col-lg-7">Aprende sobre inteligencia artificial, software y redes.</p>
+                        <a href="#ia" class="btn btn-light">Explorar temas</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="alert alert-info alert-dismissible fade show mt-4" role="alert">
+                Explora las secciones para aprender más sobre tecnología.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+
+            <!-- ===== Quiénes somos ===== -->
+            <section class="py-5" id="quienes">
+                <h2 class="text-center mb-4">Quiénes Somos</h2>
+                <p class="text-center mx-auto col-lg-8">Somos un equipo de expertos en tecnología que quiere enseñar cómo funcionan las tecnologías actuales.</p>
+                <p class="text-center mx-auto col-lg-8">Para ello ofrecemos información detallada sobre las últimas innovaciones en el campo tecnológico.</p>
+                <div class="accordion col-lg-8 mx-auto mt-4" id="preguntasTecnologia">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#respuestaAprender" aria-expanded="true" aria-controls="respuestaAprender">
+                                ¿Qué aprenderé en esta página?
+                            </button>
+                        </h3>
+                        <div id="respuestaAprender" class="accordion-collapse collapse show" data-bs-parent="#preguntasTecnologia">
+                            <div class="accordion-body">Encontrarás explicaciones sencillas sobre hardware, software, inteligencia artificial y redes.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuestaTecnologia" aria-expanded="false" aria-controls="respuestaTecnologia">
+                                ¿Por qué es importante la tecnología?
+                            </button>
+                        </h3>
+                        <div id="respuestaTecnologia" class="accordion-collapse collapse" data-bs-parent="#preguntasTecnologia">
+                            <div class="accordion-body">La tecnología nos ayuda a comunicarnos, aprender y resolver problemas cotidianos.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Temas ===== -->
+            <section class="py-5 border-top" id="temas">
+                <h2 class="text-center mb-4">Temas</h2>
+                <div id="temasCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="8000" data-bs-pause="false" role="region" aria-roledescription="carrusel" aria-label="Temas de tecnología">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#temasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Hardware"></button>
+                        <button type="button" data-bs-target="#temasCarousel" data-bs-slide-to="1" aria-label="Software"></button>
+                        <button type="button" data-bs-target="#temasCarousel" data-bs-slide-to="2" aria-label="Inteligencia Artificial"></button>
+                        <button type="button" data-bs-target="#temasCarousel" data-bs-slide-to="3" aria-label="Redes e Internet"></button>
+                        <button type="button" data-bs-target="#temasCarousel" data-bs-slide-to="4" aria-label="Contacto"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-4 py-4">
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                                    <a class="card h-100 tarjeta" href="#hardware">
+                                        <img src="img/hardwpng.png" class="card-img-top" alt="Hardware">
+                                        <div class="card-body">
+                                            <h3 class="card-title h5">Hardware</h3>
+                                            <p class="card-text text-secondary small">La parte física de la computadora: lo que puedes tocar.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 py-4">
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                                    <a class="card h-100 tarjeta" href="#software">
+                                        <img src="img/software.png" class="card-img-top" alt="Software">
+                                        <div class="card-body">
+                                            <h3 class="card-title h5">Software</h3>
+                                            <p class="card-text text-secondary small">Programas e instrucciones que le dicen al hardware qué hacer.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 py-4">
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                                    <a class="card h-100 tarjeta" href="#ia">
+                                        <img src="img/ia.png" class="card-img-top" alt="Inteligencia Artificial">
+                                        <div class="card-body">
+                                            <h3 class="card-title h5">Inteligencia Artificial</h3>
+                                            <p class="card-text text-secondary small">Máquinas que imitan la inteligencia humana.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 py-4">
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                                    <a class="card h-100 tarjeta" href="#redes">
+                                        <img src="img/redes%20e%20internet.png" class="card-img-top" alt="Redes e Internet">
+                                        <div class="card-body">
+                                            <h3 class="card-title h5">Redes e Internet</h3>
+                                            <p class="card-text text-secondary small">Cómo se conectan las computadoras en todo el mundo.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 py-4">
+                                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                                    <a class="card h-100 tarjeta" href="#contacto">
+                                        <img src="img/contactos.jpg" class="card-img-top" alt="Contacto">
+                                        <div class="card-body">
+                                            <h3 class="card-title h5">Contacto</h3>
+                                            <p class="card-text text-secondary small">¿Tienes preguntas? Escríbenos.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#temasCarousel" data-bs-slide="prev" aria-label="Tema anterior">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#temasCarousel" data-bs-slide="next" aria-label="Tema siguiente">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ===== Hardware ===== -->
+            <section class="py-5 border-top" id="hardware">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 order-md-2">
+                        <img src="img/hardwpng.png" alt="Imagen de hardware" class="img-fluid border">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h2 class="mb-3">¿Qué es el Hardware?</h2>
+                        <p>Es la parte física de la computadora: lo que puedes tocar.</p>
+                        <h3 class="h5 mt-4">Componentes principales:</h3>
+                        <ul>
+                            <li><strong>CPU:</strong> El cerebro de la computadora</li>
+                            <li><strong>RAM:</strong> Memoria temporal para trabajar</li>
+                            <li><strong>Disco Duro/SSD:</strong> Donde se guardan los archivos</li>
+                            <li><strong>Tarjeta Gráfica:</strong> Para videojuegos y diseño</li>
+                            <li><strong>Placa Madre:</strong> Conecta todo</li>
+                        </ul>
+                        <p>Más información en <a href="https://es.wikipedia.org/wiki/Hardware" target="_blank" rel="noopener">Wikipedia</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Software ===== -->
+            <section class="py-5 border-top" id="software">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 order-md-2">
+                        <img src="img/software.png" alt="Imagen de software" class="img-fluid border">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h2 class="mb-3">¿Qué es el Software?</h2>
+                        <p>Son los programas e instrucciones que le dicen al hardware qué hacer.</p>
+                        <ul>
+                            <li><strong>Sistemas Operativos:</strong> Windows, macOS, Linux, Android</li>
+                            <li><strong>Programas:</strong> Word, Excel, navegadores, juegos</li>
+                            <li><strong>Lenguajes de Programación:</strong> Python, JavaScript, HTML, CSS</li>
+                            <li><strong>Aplicaciones Web:</strong> Redes sociales, Netflix, Google</li>
+                        </ul>
+                        <p>Aprende gratis en <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Inteligencia Artificial ===== -->
+            <section class="py-5 border-top" id="ia">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5 order-md-2">
+                        <img src="img/ia.png" alt="Imagen de inteligencia artificial" class="img-fluid border">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h2 class="mb-3">¿Qué es la IA?</h2>
+                        <p>Es cuando las máquinas imitan la inteligencia humana para realizar tareas.</p>
+                        <h3 class="h5 mt-4">Ejemplos que usamos todos los días:</h3>
+                        <ul>
+                            <li>Asistentes de voz (Siri, Alexa, Google Assistant)</li>
+                            <li>Recomendaciones de Netflix o YouTube</li>
+                            <li>ChatGPT y otros chatbots</li>
+                            <li>Reconocimiento facial en celulares</li>
+                            <li>Autos que se manejan solos</li>
+                        </ul>
+                        <p>Más información sobre IA en <a href="https://www.nvidia.com/es-la/ai-data-science/learn-ai/" target="_blank" rel="noopener">NVIDIA</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Redes e Internet ===== -->
+            <section class="py-5 border-top" id="redes">
+                <h2 class="mb-3">Internet y Redes</h2>
+                <p>Internet conecta millones de computadoras en todo el mundo.</p>
+                <h3 class="h5 mt-4 mb-3">Tipos de conexión:</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Velocidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wi-Fi</td>
+                                <td>Inalámbrica en casa</td>
+                            </tr>
+                            <tr>
+                                <td>4G / 5G</td>
+                                <td>Internet del celular</td>
+                            </tr>
+                            <tr>
+                                <td>Fibra Óptica</td>
+                                <td>La más rápida</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Visita <a href="https://www.internetsociety.org/" target="_blank" rel="noopener">Internet Society</a></p>
+            </section>
+
+            <!-- ===== Contacto ===== -->
+            <section class="py-5 border-top" id="contacto">
+                <h2 class="text-center mb-2">¿Preguntas? Contáctanos</h2>
+                <p class="text-center text-secondary mb-4">Selecciona tu pregunta de las siguientes opciones:</p>
+
+                <form class="mx-auto col-lg-8">
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="tema">Tema:</label>
+                            <select class="form-select" id="tema" name="tema" required>
+                                <option value="" selected disabled>Selecciona un tema...</option>
+                                <option value="hardware">Hardware</option>
+                                <option value="software">Software</option>
+                                <option value="ia">Inteligencia Artificial</option>
+                                <option value="redes">Redes</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label class="form-label" for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="mensaje">Mensaje:</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí..." required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-dark px-4">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== Pie ===== -->
+    <footer class="border-top py-4 text-center text-secondary small">
+        <div class="container">
+            <p class="mb-0">&copy; Angel</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modalTecnologia" tabindex="-1" aria-labelledby="modalTecnologiaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="modalTecnologiaLabel">Información tecnológica</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Explora nuestras secciones para conocer los conceptos básicos de las tecnologías que usamos cada día.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const carousels = document.querySelectorAll("#inicio, #temasCarousel");
+
+        carousels.forEach((element) => {
+            const carousel = bootstrap.Carousel.getOrCreateInstance(element);
+
+            if (prefersReducedMotion.matches) {
+                carousel.pause();
+            } else {
+                carousel.cycle();
+            }
+        });
+
+        prefersReducedMotion.addEventListener("change", (event) => {
+            carousels.forEach((element) => {
+                const carousel = bootstrap.Carousel.getOrCreateInstance(element);
+                if (event.matches) {
+                    carousel.pause();
+                } else {
+                    carousel.cycle();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
